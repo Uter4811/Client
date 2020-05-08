@@ -7,31 +7,27 @@ class Client {
 
     private final int id;
 
-    private String name;
-    String rus = "абвгдеёжзийклмнопрстуфхцчъыьэюя";
+    public String name;
 
-    private final int zp = 100 + (int) (Math.random() * 999);
+    private int zp;
 
     SimpleDateFormat dateBirthday = new SimpleDateFormat("yyyy.MM.dd");
 
-    int transfer = 10 + (int) (Math.random() * 99);
-    int x = 1;
-    int transferForName = 5 + (int) (Math.random() * 10);
+    private int transfer;
 
 
     public Client(int id) {
         this.id = id;
-
-        while(x <transferForName){
-            int nameNum = 1 + (int) (Math.random() * 33);
-            name = name+ rus.charAt(nameNum);
-            x++;
-        }
+        Auxiliary.returnName(name);
+        Auxiliary.forZp(zp);
+        Auxiliary.forTrans(transfer);
     }
 
 
         public static void main(String[]args){
 
         }
+        
+        
     }
 
