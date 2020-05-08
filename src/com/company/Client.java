@@ -7,8 +7,6 @@ class Client {
 
     private final int id;
 
-    HashSet<Integer> idSet = new HashSet<Integer>();
-
     private String name;
     String rus = "абвгдеёжзийклмнопрстуфхцчъыьэюя";
 
@@ -23,7 +21,7 @@ class Client {
 
     public Client(int id) {
         this.id = id;
-        idSet.add(id);
+
         while(x <transferForName){
             int nameNum = 1 + (int) (Math.random() * 33);
             name = name+ rus.charAt(nameNum);
