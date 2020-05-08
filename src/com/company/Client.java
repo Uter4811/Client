@@ -3,48 +3,31 @@ package com.company;
 import java.text.SimpleDateFormat;
 import java.util.HashSet;
 
-public class Client {
+class Main {
 
     private final int id;
 
     HashSet<Integer> idSet = new HashSet<Integer>();
 
     private String name;
+    String rus = "абвгдеёжзийклмнопрстуфхцчъыьэюя";
 
-    private int zp;
+    private final int zp = 100 + (int) (Math.random() * 999);
 
     SimpleDateFormat dateBirthday = new SimpleDateFormat("yyyy.MM.dd");
 
     int transfer = 10 + (int) (Math.random() * 99);
+    int x = 1;
+    int transferForName = 5 + (int) (Math.random() * 10);
 
-    public Client(int id) {
+
+    public Main(int id) {
         this.id = id;
         idSet.add(id);
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        if (name.length() >= 5 && name.length() <= 10) {
-            this.name = name;
-        } else {
-            System.out.println("введите другое имя");
-        }
-    }
-
-    public int getZp() {
-        return zp;
-    }
-
-    public void setZp(int zp) {
-        if (zp > 99 && zp < 1000) {
-            this.zp = zp;
-        } else {
-            System.out.println("должно трехзначное число");
-
+        while(x <transferForName){
+            int nameNum = 1 + (int) (Math.random() * 33);
+            name = name+ rus.charAt(nameNum);
+            x++;
         }
     }
 
