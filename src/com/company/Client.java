@@ -3,7 +3,7 @@ package com.company;
 import java.text.SimpleDateFormat;
 import java.util.HashSet;
 
-public class Main {
+public class Client {
 
     private final int id;
 
@@ -17,7 +17,7 @@ public class Main {
 
     int transfer = 10 + (int) (Math.random() * 99);
 
-    public Main(int id) {
+    public Client(int id) {
         this.id = id;
         idSet.add(id);
     }
