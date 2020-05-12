@@ -21,6 +21,7 @@ class Client {
         this.name = Auxiliary.returnName(name);
         this.zp =  Auxiliary.forZp();
         this.transfer = Auxiliary.forTrans();
+        this.dateBirthday = Auxiliary.forDate();
     }
 
 

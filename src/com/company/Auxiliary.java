@@ -1,5 +1,6 @@
 package com.company;
 
+import java.text.SimpleDateFormat;
 import java.util.Random;
 
 public class Auxiliary {
@@ -37,6 +38,16 @@ public class Auxiliary {
     public static  int forTrans(){
         int z =10 + (int) (Math.random() * 99);
         return z;
+    }
+
+
+    public static SimpleDateFormat forDate(){
+        int z =1970 + (int) (Math.random() * 2010);
+        int x =1 + (int) (Math.random() * 12);
+        int y =1 + (int) (Math.random() * 30);
+
+        SimpleDateFormat dateBirthday = new SimpleDateFormat(z+"."+x+"."+y);
+        return dateBirthday;
     }
 
 }
