@@ -18,7 +18,7 @@ class Client {
 
     public Client(int id) {
         this.id = id;
-        Auxiliary.returnName(name);
+        this.name = Auxiliary.returnName(name);
         Auxiliary.forZp();
         Auxiliary.forTrans();
     }
