@@ -19,14 +19,14 @@ class Client {
     public Client(int id) {
         this.id = id;
         this.name = Auxiliary.returnName(name);
-        Auxiliary.forZp();
-        Auxiliary.forTrans();
+        this.zp =  Auxiliary.forZp();
+        this.transfer = Auxiliary.forTrans();
     }
 
 
         public static void main(String[]args){
         Client cl = new Client(3007);
-            System.out.println(cl.name);
+            System.out.println(cl.zp);
 
         }
         
