@@ -11,7 +11,7 @@ class Client {
 
     private int zp;
 
-    SimpleDateFormat dateBirthday = new SimpleDateFormat("yyyy.MM.dd");
+    String dateBirthday;
 
     private int transfer;
 
@@ -27,7 +27,7 @@ class Client {
 
         public static void main(String[]args){
         Client cl = new Client(3007);
-            System.out.println(cl.zp);
+            System.out.println(cl.dateBirthday);
 
         }
         

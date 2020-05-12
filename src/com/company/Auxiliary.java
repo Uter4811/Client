@@ -41,12 +41,12 @@ public class Auxiliary {
     }
 
 
-    public static SimpleDateFormat forDate(){
-        int z =1970 + (int) (Math.random() * 2010);
+    public static String forDate(){
+        int z =1970 + (int) (Math.random() * 40);
         int x =1 + (int) (Math.random() * 12);
         int y =1 + (int) (Math.random() * 30);
 
-        SimpleDateFormat dateBirthday = new SimpleDateFormat(z+"."+x+"."+y);
+        String dateBirthday = new String(z+"."+x+"."+y);
         return dateBirthday;
     }
 
