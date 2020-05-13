@@ -30,13 +30,13 @@ public class Auxiliary {
     }
 
 
-    public static  int forZp(){
-       int z = 100 + (int) (Math.random() * 999);
+    public static  int forZp(int id){
+       int z = (int) (id/10);
        return z;
     }
 
-    public static  int forTrans(){
-        int z =10 + (int) (Math.random() * 99);
+    public static  int forTrans(int id){
+        int z = (int) (id/100);;
         return z;
     }
 
