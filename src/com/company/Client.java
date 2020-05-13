@@ -18,25 +18,29 @@ class Client {
 
     public Client(int id) {
         this.id = id;
-        this.name = Auxiliary.returnName(name, this.id);
+        this.name = Auxiliary.returnName(this.id);
         this.zp =  Auxiliary.forZp(this.id);
         this.transfer = Auxiliary.forTrans(this.id);
         this.dateBirthday = Auxiliary.forDate(this.id);
     }
 
 
-        public static void main(String[]args){
-        Client cl = new Client(3001);
-            System.out.println(cl.transfer);
+        public static void main(String[]args) {
+
+            for (int i = 1000; i<2000; i++) {
+                System.out.println(new Client(i).zp);
+            }
+
+}
 
 
-        Client c2 = new Client(3002);
-            System.out.println(c2.transfer);
+
+
 
 }
         
         
-    }
+
 
 
    /* public static String returnName(String name) {
