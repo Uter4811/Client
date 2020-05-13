@@ -20,18 +20,18 @@ class Client {
         this.id = id;
         this.name = Auxiliary.returnName(name, this.id);
         this.zp =  Auxiliary.forZp(this.id);
-        this.transfer = Auxiliary.forTrans();
+        this.transfer = Auxiliary.forTrans(this.id);
         this.dateBirthday = Auxiliary.forDate(this.id);
     }
 
 
         public static void main(String[]args){
-        Client cl = new Client(3007);
-            System.out.println(cl.dateBirthday);
+        Client cl = new Client(3001);
+            System.out.println(cl.transfer);
 
 
-        Client c2 = new Client(3007);
-            System.out.println(c2.dateBirthday);
+        Client c2 = new Client(3002);
+            System.out.println(c2.transfer);
 
 }
         

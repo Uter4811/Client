@@ -30,12 +30,33 @@ public class Auxiliary {
 
 
     public static int forZp(int id) {
-        int z = (int) (id / 10);
+        int z = 0;
+        if (id % 100 == 1) {
+
+            z = id % 1000 + 500;
+        } else if (id % 100 == 2 || id % 100 == 3) {
+
+            z = id % 1000 + 300;
+
+        } else {
+
+            z = id % 1000;
+
+        }
         return z;
     }
 
-    public static int forTrans() {
-        int z = 10 + (int) (Math.random() * 99);
+
+    public static int forTrans(int id) {
+        int z = 0;
+        if (id % 100 == 1 || id % 100 == 2 || id % 100 == 3 || id % 100 == 4) {
+             z = 1 + (int) (Math.random() * 20);
+
+        }
+        if (id % 100 == 5 || id % 100 == 6 || id % 100 == 7 || id % 100 == 8 || id % 100 == 9) {
+             z = 20 + (int) (Math.random()*50);
+
+        }
         return z;
     }
 
