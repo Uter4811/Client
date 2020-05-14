@@ -26,10 +26,30 @@ class Client {
 
 
         public static void main(String[]args) {
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+        int e = 0;
 
             for (int i = 1000; i<2000; i++) {
-                System.out.println(new Client(i).zp);
+                Client cl = new Client(i);
+                if(cl.zp < 300){
+                    a++;
+                } else if(cl.zp > 300 && cl.zp < 500){
+                    b++;
+                } else if(cl.zp > 500){
+                    c++;
+                }
+                if(cl.transfer < 20){
+                    d++;
+                } else if(cl.transfer > 20 && cl.transfer < 50){
+                    e++;
+                }
+
             }
+
+            System.out.println(a+" "+b+" "+c+" "+d+" "+e);
 
 }
 
